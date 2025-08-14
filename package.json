@@ -1,0 +1,27 @@
+{
+  "name": "smart-router-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "execute": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lamptzz/smart-router-example.git"
+  },
+  "author": "lamptzz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lamptzz/smart-router-example/issues"
+  },
+  "homepage": "https://github.com/lamptzz/smart-router-example#readme",
+  "description": "",
+  "engines": {
+    "node": ">=10"
+  },
+  "dependencies": {
+    "@thenafi/router-sdk": "^0.0.3",
+    "thena-sdk-core": "^0.0.6"
+  }
+}
