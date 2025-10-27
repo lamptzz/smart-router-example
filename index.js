@@ -8,28 +8,33 @@ const router = new AlphaRouter({
 
 const TOKEN_IN = new Token(
   ChainId.BSC,
-  '0xf4c8e32eadec4bfe97e0f595add0f4450a863a11',
+  '0x55d398326f99059ff775485246999027b3197955',
   18,
-  'THE',
-  'THENA'
+  'USDT',
+  'Tether USD'
 )
 
 const TOKEN_OUT = new Token(
   ChainId.BSC,
-  '0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c',
+  '0xf4c8e32eadec4bfe97e0f595add0f4450a863a11',
   18,
-  'WBNB',
-  'WBNB'
+  'THE',
+  'Thena'
 )
 
 async function generateRoute() {
-  const amountIn = parseAmount('1', TOKEN_IN)
+  const amountIn = parseAmount('100', TOKEN_IN)
   const route = await router.route(amountIn, TOKEN_OUT, TradeType.EXACT_INPUT, undefined)
   return route
 }
 
 async function main() {
   const route = await generateRoute()
+  if (!route) {
+    console.log('No route found')
+    return
+  }
+
   console.log('route', routeAmountsToString(route.route))
   console.log('quoteExactIn', route.quote.toFixed(Math.min(route.quote.currency.decimals, 10)))
   console.log('priceImpact', route.trade.priceImpact.toFixed(2))
