@@ -349,10 +349,10 @@
   resolved "https://registry.npmjs.org/@graphql-typed-document-node/core/-/core-3.2.0.tgz"
   integrity sha512-mB9oAsNCm9aM3/SOv4YtBMqZbYj10R7dkq8byBqxGY/ncFwhf2oQzMV+LCRlWoDSEBJ3COiR1yeDvMtsoOsuFQ==
 
-"@thenafi/pool-sdk@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@thenafi/pool-sdk/-/pool-sdk-0.0.1.tgz#1500c0bd404e3480dd76b0de551ed9b00421881f"
-  integrity sha512-tH+BYvL28vBr01mtMdHKaCkxAYkpKeVuHk6HimtTMdO4c3J3Y4vTX3dzy+fsPF+5P6ztsSuDO/Nvm8C/bzo4OA==
+"@thenafi/pool-sdk@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@thenafi/pool-sdk/-/pool-sdk-0.0.3.tgz#3daa999dbda26ef57b4f92d0acdae541537684e0"
+  integrity sha512-PKYGcYoqTEAo/pkiMP2TuX/06L+ln0Mjli48puFIbWtn/WjXAV38NGZkJbSch9cnsv+KggvY8ESfEElE5VN+Nw==
   dependencies:
     "@ethersproject/abi" "^5.0.12"
     "@ethersproject/solidity" "^5.0.9"
@@ -360,14 +360,14 @@
     tiny-invariant "^1.1.0"
     tiny-warning "^1.0.3"
 
-"@thenafi/router-sdk@^0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@thenafi/router-sdk/-/router-sdk-0.0.3.tgz#ea0165d4d05694b6bcb240f701fcb8038a39dfa4"
-  integrity sha512-rDyxRAg36oHYHCS0tFd7pizfZvIaNpkqjbq/uCBhDFrABCNGcjy7nH6//pNt10v2823DlxHotQfeqm0fXTx9Kg==
+"@thenafi/router-sdk@^0.0.10":
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/@thenafi/router-sdk/-/router-sdk-0.0.10.tgz#d9b079c6526c8bbb6ad1ad0d6da887efdd6592f8"
+  integrity sha512-nQhWFTBw3rAR29/ML7U/42+ZPw/fplOjKlMilYFsGlvIfvRZQmcaw7AWp4GIpQCeiFTq+GXBIIRQPNvWDdhSAg==
   dependencies:
     "@ethersproject/bytes" "^5.0.0"
     "@ethersproject/providers" "^5.4.0"
-    "@thenafi/pool-sdk" "^0.0.1"
+    "@thenafi/pool-sdk" "^0.0.3"
     async-retry "^1.3.1"
     await-timeout "^1.1.1"
     axios "^0.21.1"

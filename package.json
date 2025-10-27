@@ -21,7 +21,7 @@
     "node": ">=10"
   },
   "dependencies": {
-    "@thenafi/router-sdk": "^0.0.3",
+    "@thenafi/router-sdk": "^0.0.10",
     "thena-sdk-core": "^0.0.6"
   }
 }
