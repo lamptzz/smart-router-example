@@ -22,22 +22,38 @@ const TOKEN_OUT = new Token(
   'Thena'
 )
 
+// SDK usage
 async function generateRoute() {
   const amountIn = parseAmount('100', TOKEN_IN)
   const route = await router.route(amountIn, TOKEN_OUT, TradeType.EXACT_INPUT, undefined)
   return route
 }
 
+// API usage
+async function fetchQuoteFromAPI() {
+  const amountIn = '0.005'
+  const response = await fetch(
+    `https://api.thena.fi/api/v3/trading-route?chainId=56&tokenIn=${TOKEN_IN.address}&tokenOut=${TOKEN_OUT.address}&amountIn=${amountIn}`,
+    {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }
+  )
+  const { data } = await response.json()
+  return data
+}
+
 async function main() {
-  const route = await generateRoute()
+  const route = await fetchQuoteFromAPI()
   if (!route) {
     console.log('No route found')
     return
   }
 
-  console.log('route', routeAmountsToString(route.route))
-  console.log('quoteExactIn', route.quote.toFixed(Math.min(route.quote.currency.decimals, 10)))
-  console.log('priceImpact', route.trade.priceImpact.toFixed(2))
+  console.log('quote', route.quote)
+  console.log('priceImpact', route.priceImpact)
 }
 
 main()
